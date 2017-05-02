@@ -1,0 +1,2 @@
+com\Jayce\ActiveMQ\Service\ConsumerService.class
+com\Jayce\Redis\Utils\SerializeUtil.class

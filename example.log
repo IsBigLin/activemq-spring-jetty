@@ -1,0 +1,66 @@
+ERROR queueListenerContainer-1 org.springframework.jms.listener.DefaultMessageListenerContainer - Could not refresh JMS Connection for destination 'queue://Jaycekon' - retrying using FixedBackOff{interval=5000, currentAttempts=29, maxAttempts=unlimited}. Cause: Cannot send, channel has already failed: tcp://127.0.0.1:8161
+WARN ActiveMQ Connection Executor: tcp:///127.0.0.1:8161@62819 org.springframework.jms.connection.CachingConnectionFactory - Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: Unknown data type: 47
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1949)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1966)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:295)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Unknown data type: 47
+	at org.apache.activemq.openwire.OpenWireFormat.doUnmarshal(OpenWireFormat.java:365)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:285)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:229)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:221)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:204)
+	... 1 more
+ERROR queueListenerContainer-1 org.springframework.jms.listener.DefaultMessageListenerContainer - Could not refresh JMS Connection for destination 'queue://Jaycekon' - retrying using FixedBackOff{interval=5000, currentAttempts=30, maxAttempts=unlimited}. Cause: Cannot send, channel has already failed: tcp://127.0.0.1:8161
+WARN ActiveMQ Connection Executor: tcp:///127.0.0.1:8161@62821 org.springframework.jms.connection.CachingConnectionFactory - Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: Unknown data type: 47
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1949)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1966)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:295)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Unknown data type: 47
+	at org.apache.activemq.openwire.OpenWireFormat.doUnmarshal(OpenWireFormat.java:365)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:285)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:229)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:221)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:204)
+	... 1 more
+WARN ActiveMQ Connection Executor: tcp://localhost/127.0.0.1:61616@62961 org.springframework.jms.connection.CachingConnectionFactory - Encountered a JMSException - resetting the underlying JMS Connection
+javax.jms.JMSException: java.io.EOFException
+	at org.apache.activemq.util.JMSExceptionSupport.create(JMSExceptionSupport.java:49)
+	at org.apache.activemq.ActiveMQConnection.onAsyncException(ActiveMQConnection.java:1949)
+	at org.apache.activemq.ActiveMQConnection.onException(ActiveMQConnection.java:1966)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.ResponseCorrelator.onException(ResponseCorrelator.java:126)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.TransportFilter.onException(TransportFilter.java:101)
+	at org.apache.activemq.transport.WireFormatNegotiator.onException(WireFormatNegotiator.java:160)
+	at org.apache.activemq.transport.AbstractInactivityMonitor.onException(AbstractInactivityMonitor.java:295)
+	at org.apache.activemq.transport.TransportSupport.onException(TransportSupport.java:96)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:208)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.activemq.openwire.OpenWireFormat.unmarshal(OpenWireFormat.java:275)
+	at org.apache.activemq.transport.tcp.TcpTransport.readCommand(TcpTransport.java:229)
+	at org.apache.activemq.transport.tcp.TcpTransport.doRun(TcpTransport.java:221)
+	at org.apache.activemq.transport.tcp.TcpTransport.run(TcpTransport.java:204)
+	... 1 more
+WARN queueListenerContainer-1 org.springframework.jms.listener.DefaultMessageListenerContainer - Setup of JMS message listener invoker failed for destination 'queue://Jaycekon' - trying to recover. Cause: The Consumer is closed
